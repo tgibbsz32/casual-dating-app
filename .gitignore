@@ -1,0 +1,23 @@
+node_modules/
+dist/
+.wrangler/
+.tools/
+.logs/
+artifacts/
+*.tsbuildinfo
+
+# Capacitor / Gradle build output
+android/app/build/
+android/build/
+android/.gradle/
+android/capacitor-cordova-android-plugins/build/
+android/app/src/main/assets/public/
+android/app/src/main/assets/capacitor.config.json
+android/app/src/main/assets/capacitor.plugins.json
+
+# Local secrets — never commit
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks

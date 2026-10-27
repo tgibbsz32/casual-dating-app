@@ -1,0 +1,41 @@
+{
+  "name": "spark",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:demo": "SPARK_DEMO=1 vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "workspace": "node scripts/archil-workspace.mjs",
+    "typecheck": "tsc -b --pretty false",
+    "seed:generate": "node scripts/generate-seed.mjs",
+    "icons:generate": "node scripts/make-icons.mjs",
+    "test": "bash test/api-test.sh",
+    "test:api": "bash test/api-test.sh",
+    "db:migrate:local": "wrangler d1 execute spark --local --file=./migrations/0001_init.sql",
+    "db:seed:local": "wrangler d1 execute spark --local --file=./migrations/seed.sql"
+  },
+  "dependencies": {
+    "@capacitor/core": "^8.5.3",
+    "@freebuff/auth": "^0.1.0",
+    "hono": "^4.13.14",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^8.5.3",
+    "@capacitor/cli": "^8.5.3",
+    "@cloudflare/vite-plugin": "^1.65.0",
+    "@cloudflare/workers-types": "^5.20261027.1",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "disk": "1.9.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "wrangler": "^4.153.0"
+  }
+}
